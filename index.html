@@ -14,11 +14,12 @@
     <section>
         <div>
             <p>Ano de nascimento: <input type="number" id="ano"></p>
-            <p>Sexo: <input name="sexo" type="radio">Masculino <input name="sexo" type="radio">Feminino</p>
+            <p>Sexo: <input onclick="verificadorDeSexo('m')" name="sexo" type="radio">Masculino <input onclick="verificadorDeSexo('f')" name="sexo" type="radio">Feminino</p>
+            <p id="msg"></p>
             <input type="button" value="Idade" onclick="idade()">
         </div>
         <div>
-            <img>
+            <img id="img">
         </div>
     </section>
     <footer>Desenvolvido em aula</footer>
