@@ -13,10 +13,17 @@
     </header>
     <section>
         <div>
-            <p>Ano de nascimento: <input type="number" id="ano"></p>
-            <p>Sexo: <input onclick="verificadorDeSexo('m')" name="sexo" type="radio">Masculino <input onclick="verificadorDeSexo('f')" name="sexo" type="radio">Feminino</p>
+            <p>Ano de nascimento: 
+                <input type="number" id="ano" min="0" max="2024">
+            </p>
+            <p>Sexo:
+                <input id="mas" onclick="verificadorDeSexo('m')" name="sexo" type="radio" checked>
+                <label for="mas">Masculino</label>
+                <input id="fem" onclick="verificadorDeSexo('f')" name="sexo" type="radio">
+                <label for="fem">Feminino</label>
+            </p>
             <p id="msg"></p>
-            <input type="button" value="Idade" onclick="idade()">
+            <input type="button" value="Verificar" onclick="idade()">
         </div>
         <div>
             <img id="img">
