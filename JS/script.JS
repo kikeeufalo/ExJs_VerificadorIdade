@@ -1,32 +1,20 @@
-var anoNascimento = window.document.getElementById("ano");
-var anoAtual = new Date();
-var msg = window.document.getElementById("msg");
-var img = window.document.getElementById("img");
-var m = window.document.getElementById("masculino");
-var f = window.document.getElementById("feminino");
-var sexo;
-
-const imgs = [
-    "./IMG/criança_h.jpg",
-    "./IMG/adulto_h.jpg",
-    "./IMG/jovem_h.png",
-    "./IMG/velho_h.jpg",
-
-    "./IMG/criança_m.jpg",
-    "./IMG/jovem_m.jpg",
-    "./IMG/adulto_m.jpg",
-    "./IMG/velho_m.jpg"
-];
-
-function verificadorDeSexo(s) {
-    if (s == 'm') {
-        sexo = true
-    }else if (s == 'f') {
-        sexo = false
-    };
-};
-
 function idade() {
+    var anoNascimento = window.document.getElementById("ano");
+    var anoAtual = new Date();
+    var msg = window.document.getElementById("msg");
+    var img = window.document.getElementById("img");
+
+    const imgs = [
+        "./IMG/criança_h.jpg",
+        "./IMG/adulto_h.jpg",
+        "./IMG/jovem_h.png",
+        "./IMG/velho_h.jpg",
+
+        "./IMG/criança_m.jpg",
+        "./IMG/jovem_m.jpg",
+        "./IMG/adulto_m.jpg",
+        "./IMG/velho_m.jpg"
+    ];
     var i = anoAtual.getFullYear() - anoNascimento.value
     if (i <= 10) {
         if (sexo == true) {
@@ -64,3 +52,13 @@ function idade() {
         msg.innerText = 'Algo deu errado tente novamente'
     };
 }
+var m = window.document.getElementById("masculino");
+var f = window.document.getElementById("feminino");
+var sexo;
+function verificadorDeSexo(s) {
+    if (s == 'm') {
+        sexo = true
+    }else if (s == 'f') {
+        sexo = false
+    };
+};
